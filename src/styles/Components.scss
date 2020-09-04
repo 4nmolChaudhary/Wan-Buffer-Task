@@ -1,0 +1,159 @@
+@import './variables';
+@import './mixins';
+:root{
+  font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+.content{
+    @include displayFlex(row,center,center);
+    width: 60%;
+    height:80%;
+    margin: auto 0;
+    background: #fff;
+    box-shadow: 0 18px 48px rgba(208,208,208,.35);
+    border-radius: 8px;
+    overflow: hidden;
+    .lists{
+        @include displayFlex(column,flex-start,center);
+        height: 100%;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 12px;
+        overflow-y: scroll ;
+        .listItem{
+            @include displayFlex(row,space-evenly,center);
+            padding: 12px 0;
+            border: 1px dotted #313131;
+            border-radius: 4px;
+            width: 100%;
+            margin: 5px ;
+            button{
+                border: none;
+                outline: none;
+                background: #313131;
+                padding: 5px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .text-content{
+        @include displayFlex(column,space-between,center);
+        height: 100%;
+        width: 50%;
+        box-sizing: border-box;
+        .header{
+            @include displayFlex(row,space-between,center);
+            width: 100%;
+            padding: 20px;
+            .github-icon{
+                &:hover{
+                    cursor: pointer;           
+                }
+            }
+        }
+        .inner-content{
+            width: 70%;
+            margin: auto;
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+            h3{
+                font-size: 1.5rem;
+                font-family:'Gilroy-Light';
+                font-weight: 200;
+                margin-bottom: 1.5rem;
+            }
+            
+            .login{
+                .input-box{
+                    border:1px solid #ededed;
+                    padding: 10px 16px;
+                    @include displayFlex(column,center,flex-start);
+                    .textbox{
+                        border: none;
+                        outline: none;
+                        padding: 6px 0px;
+                        font-family: 'Gilroy-Light';
+                        font-size: 16px;
+                        font-weight: 800;
+                        color: $primaryColor;
+                        width: 100%;
+                        &:focus > .input-box{
+                            border:1px solid black;
+                        }
+                    }
+                    .label-name{
+                        font-family: 'Gilroy-Extrabold';
+                        font-size: 14px;
+                        color: #313131;
+                        text-transform: uppercase;
+                    }
+                }
+                .link{   
+                    text-decoration: none;                 
+                }
+                button{
+                    @include displayFlex(row,center,center);
+                    border: none;
+                    outline: none;
+                    font-family: 'Gilroy-Light';
+                    font-size: 14px;
+                    padding: 12px;
+                    margin:12px 0px;
+                    border-radius: 4px;
+                    color: $primaryTextColor;
+                    background: $secondaryColor;
+                    box-shadow: 0 18px 48px rgba(60,55,68,.35);
+                    &:hover{
+                        cursor: pointer; 
+                    }
+                    background: $primaryColor;
+                    &:active {
+                        transition: transform 100ms ease-in;
+                        transform: scale(0.95);
+                      }          
+                }
+        }
+        
+        }
+    }
+    .image{
+        width:50%;
+        height: 100%;
+        padding: 15px;
+        background: #dedede;
+        @include displayFlex(column,center,center);
+        .actions{
+            @include displayFlex(row,space-evenly,center);
+            width: 100%;
+            button{
+                @include displayFlex(column,center,center);
+                        border: none;
+                        outline: none;
+                        font-family: 'Gilroy-Light';
+                        font-size: 14px;
+                        width:150px;
+                        height: 150px;
+                        margin:12px 0px;
+                        border-radius: 4px;
+                        color: $primaryTextColor;
+                        background: $secondaryColor;
+                        box-shadow: 0 18px 48px rgba(60,55,68,.35);
+                        &:hover{
+                            cursor: pointer; 
+                        }
+                        background: $primaryColor;
+                        &:active {
+                            transition: transform 100ms ease-in;
+                            transform: scale(0.95);
+                          }          
+            }
+        }
+    }
+}

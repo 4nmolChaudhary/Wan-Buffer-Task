@@ -1,0 +1,20 @@
+/*---------------------------------- fonts ----------------------------------*/
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url("fonts/Gilroy-ExtraBold.otf");
+}
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("fonts/Gilroy-Light.ttf");
+}
+
+.App {
+  font-family: 'Gilroy-Light', sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  height: 100vh;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
